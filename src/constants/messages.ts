@@ -1,0 +1,30 @@
+export const USER_MESSAGES = {
+  VALIDATION_ERROR: 'validation error',
+  NAME_IS_REQUIRED: 'name is required',
+  NAME_MUST_BE_STRING: 'name must be a string',
+  NAME_LENGTH_MUST_BE_FROM_1_TO_100: 'name length must be from 3 to 20 characters',
+  EMAIL_ALREADY_EXISTS: 'email already exists',
+  EMAIL_IS_REQUIRED: 'email is required',
+  EMAIL_IS_INVALID: 'email is invalid',
+  EMAIL_OR_PASSWORD_INCORRECT: 'email or password is incorrect',
+  PASSWORD_IS_REQUIRED: 'password is required',
+  PASSWORD_MUST_BE_STRING: 'password must be a string',
+  PASSWORD_LENGTH_MUST_BE_FROM_6_TO_50: 'password length must be from 6 to 20 characters',
+  PASSWORD_MUST_BE_STRONG:
+    'password must be 6-50 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character',
+  CONFIRM_PASSWORD_IS_REQUIRED: 'confirm password is required',
+  CONFIRM_PASSWORD_MUST_BE_STRING: 'confirm password must be a string',
+  CONFIRM_PASSWORD_LENGTH_MUST_BE_FROM_6_TO_50: 'confirm password length must be from 6 to 20 characters',
+  CONFIRM_PASSWORD_MUST_BE_STRONG:
+    'confirm password must be 6-50 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character',
+  CONFIRM_PASSWORD_MUST_BE_SAME_AS_PASSWORD: 'confirm password must be same as password',
+  DATE_OF_BIRTH_IS_BE_ISO8601: 'date of birth must be in ISO8601 format',
+  LOGIN_SUCCESS: 'login success',
+  REGISTER_SUCCESS: 'register success',
+  ACCESS_TOKEN_IS_REQUIRED: 'access token is required',
+  ACESS_TOKEN_IS_INVALID: 'access token is invalid',
+  REFRESH_TOKEN_IS_REQUIRED: 'refresh token is required',
+  REFRESH_TOKEN_IS_INVALID: 'refresh token is invalid',
+  USER_REFRESH_TOKEN_OR_NOT_EXISTS: 'user refresh token or not exists',
+  LOGOUT_SUCCESS: 'logout success'
+} as const
