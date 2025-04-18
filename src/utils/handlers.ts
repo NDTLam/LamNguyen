@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction, RequestHandler } from 'express'
 
-export const wrapRequestHandler = (func: RequestHandler) => {
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+export const wrapRequestHandler = (handler: Function) => {
   return async (req: Request, res: Response, next: NextFunction) => {
-    //Promise.resolve(func(req, res, next)).catch(next)
     try {
-      await func(req, res, next)
+      await handler(req, res, next)
     } catch (error) {
       next(error)
     }
