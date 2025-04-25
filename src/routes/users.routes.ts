@@ -10,17 +10,22 @@ import {
   verifyForgotPasswordController,
   resetPasswordController,
   getMeController,
-  updateMeController
+  updateMeController,
+  getProfileController,
+  followController,
+  unfollowController
 } from '~/controllers/users.controllers'
 import { filterMiddleware } from '~/middlewares/common.middlewares'
 import {
   accessTokenValidator,
   emailVerifyTokenValidator,
+  followValidator,
   forgotPasswordValidator,
   loginValidator,
   refreshTokenValidator,
   registerValidator,
   resetPasswordValidator,
+  unfollowValidator,
   updateMeValidator,
   VerifiedUserValidator,
   verifyForgotPasswordTokenValidator
@@ -58,5 +63,20 @@ usersRouter.patch(
     'cover_photo'
   ]),
   wrapRequestHandler(updateMeController)
+)
+usersRouter.get('/:username', wrapRequestHandler(getProfileController))
+usersRouter.post(
+  '/follow',
+  accessTokenValidator,
+  VerifiedUserValidator,
+  followValidator,
+  wrapRequestHandler(followController)
+)
+usersRouter.delete(
+  '/follow/:user_id',
+  accessTokenValidator,
+  VerifiedUserValidator,
+  unfollowValidator,
+  wrapRequestHandler(unfollowController)
 )
 export default usersRouter

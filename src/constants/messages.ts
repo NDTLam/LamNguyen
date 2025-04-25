@@ -49,5 +49,11 @@ export const USER_MESSAGES = {
   USERNAME_LENGTH: 'username length must be from 1 to 50',
   IMAGE_URL_MUST_BE_STRING: 'avatar must be string',
   IMAGE_URL_LENGTH: 'avatar length must be from 1 to 400',
-  UPDATE_ME_SUCCESS: 'update my profile success'
+  UPDATE_ME_SUCCESS: 'update my profile success',
+  GET_PROFILE_SUCCESS: 'get profile success',
+  FOLLOW_SUCCESS: 'follow success',
+  INVALID_USER_ID: 'invalid user id',
+  FOLLOWED: 'already followed',
+  ALREADY_UNFOLLOWED: 'already unfollowed',
+  UNFOLLOW_SUCCESS: 'unfollow success'
 } as const
